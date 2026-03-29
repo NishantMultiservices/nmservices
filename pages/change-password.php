@@ -1,11 +1,11 @@
 <?php
-require_once '../../config/db.php';
-require_once '../../includes/functions.php';
-require_once '../../includes/Auth.php';
+require_once '../config/db.php';
+require_once '../includes/functions.php';
+require_once '../includes/Auth.php';
 requireLogin();
 
 $page_title = 'Change Password - ' . APP_NAME;
-include '../../includes/header.php';
+include '../includes/header.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $old_password = $_POST['old_password'] ?? '';
@@ -80,4 +80,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </div>
 
-<?php include '../../includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

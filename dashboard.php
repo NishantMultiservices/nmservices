@@ -26,6 +26,33 @@ $recent_expense = $conn->query("SELECT * FROM expense ORDER BY expense_date DESC
     
     <?php displayMessage(); ?>
 
+    <!-- Quick Actions (MOVED TO TOP) -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <i class="bi bi-lightning"></i> Quick Actions
+                </div>
+                <div class="card-body">
+                    <div class="btn-group" role="group">
+                        <a href="pages/customers.php" class="btn btn-outline-primary">
+                            <i class="bi bi-plus-lg"></i> Add Customer
+                        </a>
+                        <a href="pages/income.php" class="btn btn-outline-success">
+                            <i class="bi bi-plus-lg"></i> Add Income
+                        </a>
+                        <a href="pages/expense.php" class="btn btn-outline-danger">
+                            <i class="bi bi-plus-lg"></i> Add Expense
+                        </a>
+                        <a href="pages/reports.php" class="btn btn-outline-info">
+                            <i class="bi bi-graph-up"></i> View Reports
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Statistics Cards -->
     <div class="row mb-4">
         <div class="col-md-6 col-lg-3">
@@ -37,14 +64,14 @@ $recent_expense = $conn->query("SELECT * FROM expense ORDER BY expense_date DESC
         </div>
         <div class="col-md-6 col-lg-3">
             <div class="stat-card income">
-                <i class="bi bi-cash-in" style="font-size: 2rem;"></i>
+                <i class="bi bi-cash-coin" style="font-size: 2rem;"></i>
                 <h3><?php echo formatCurrency($total_income); ?></h3>
                 <p>Total Income</p>
             </div>
         </div>
         <div class="col-md-6 col-lg-3">
             <div class="stat-card expense">
-                <i class="bi bi-cash-out" style="font-size: 2rem;"></i>
+                <i class="bi bi-wallet2" style="font-size: 2rem;"></i>
                 <h3><?php echo formatCurrency($total_expense); ?></h3>
                 <p>Total Expense</p>
             </div>
@@ -135,32 +162,6 @@ $recent_expense = $conn->query("SELECT * FROM expense ORDER BY expense_date DESC
                     <?php else: ?>
                         <p class="text-muted">No expense records yet.</p>
                     <?php endif; ?>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row mt-4">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-header">
-                    <i class="bi bi-info-circle"></i> Quick Actions
-                </div>
-                <div class="card-body">
-                    <div class="btn-group" role="group">
-                        <a href="pages/customers.php" class="btn btn-outline-primary">
-                            <i class="bi bi-plus-lg"></i> Add Customer
-                        </a>
-                        <a href="pages/income.php" class="btn btn-outline-success">
-                            <i class="bi bi-plus-lg"></i> Add Income
-                        </a>
-                        <a href="pages/expense.php" class="btn btn-outline-danger">
-                            <i class="bi bi-plus-lg"></i> Add Expense
-                        </a>
-                        <a href="pages/reports.php" class="btn btn-outline-info">
-                            <i class="bi bi-graph-up"></i> View Reports
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@
                     <p class="text-muted mb-0">&copy; 2026 <?php echo APP_NAME; ?>. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-end">
-                    <p class="text-muted mb-0">Developed with <i class="bi bi-heart-fill text-danger"></i> by Your Company</p>
+                    <p class="text-muted mb-0">Developed with <i class="bi bi-heart-fill text-danger"></i> by Nishant Multiservices</p>
                 </div>
             </div>
         </div>

@@ -104,7 +104,7 @@ define('DB_NAME', 'nmservices');         // Database name
 Edit `config/db.php` to customize:
 
 ```php
-define('APP_NAME', 'Your Shop Name');
+define('APP_NAME', 'NMServices');
 define('APP_URL', 'http://yourdomain.com/nmservices/');
 ```
 
