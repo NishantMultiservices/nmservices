@@ -1,0 +1,48 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Ignore IDE files
+.vscode/
+.idea/
+.sublime-*
+*.sublime-*
+*.project
+*.pydevproject
+.c9/
+
+# Ignore sensitive files
+config/db.php
+.env
+.env.local
+
+# Ignore uploads
+public/uploads/*
+!public/uploads/.gitkeep
+
+# Ignore cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore logs
+*.log
+logs/
+
+# Ignore temporary files
+tmp/
+temp/
+
+# Ignore node modules (if using npm)
+node_modules/
+package-lock.json
+
+# Ignore composer files (if using)
+vendor/
+composer.lock
+
+# Keep this file in uploads
+!public/uploads/.gitkeep
