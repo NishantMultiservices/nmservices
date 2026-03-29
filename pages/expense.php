@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
         setMessage('❌ Amount must be greater than 0', 'danger');
     } else {
         $stmt = $conn->prepare("INSERT INTO expense (category, description, amount, payment_method, reference_number, expense_date, vendor_name, created_by) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssdssss i", $category, $description, $amount, $payment_method, $reference_number, $expense_date, $vendor_name, $user_id);
+        $stmt->bind_param("ssdssssi", $category, $description, $amount, $payment_method, $reference_number, $expense_date, $vendor_name, $user_id);
         
         if ($stmt->execute()) {
             setMessage('✅ Expense record added successfully', 'success');

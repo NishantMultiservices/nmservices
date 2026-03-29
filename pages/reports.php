@@ -99,7 +99,7 @@ $top_customers = $conn->query("
     <div class="row mb-4">
         <div class="col-md-3">
             <div class="stat-card income">
-                <i class="bi bi-cash-in" style="font-size: 2rem;"></i>
+                <i class="bi bi-cash-coin" style="font-size: 2rem;"></i>
                 <h3><?php echo formatCurrency($income_summary['total'] ?? 0); ?></h3>
                 <p>Total Income</p>
                 <small><?php echo $income_summary['count'] ?? 0; ?> transactions</small>
@@ -107,7 +107,7 @@ $top_customers = $conn->query("
         </div>
         <div class="col-md-3">
             <div class="stat-card expense">
-                <i class="bi bi-cash-out" style="font-size: 2rem;"></i>
+                <i class="bi bi-wallet2" style="font-size: 2rem;"></i>
                 <h3><?php echo formatCurrency($expense_summary['total'] ?? 0); ?></h3>
                 <p>Total Expense</p>
                 <small><?php echo $expense_summary['count'] ?? 0; ?> transactions</small>
@@ -118,6 +118,7 @@ $top_customers = $conn->query("
                 <i class="bi bi-graph-up" style="font-size: 2rem;"></i>
                 <h3><?php echo formatCurrency(($income_summary['total'] ?? 0) - ($expense_summary['total'] ?? 0)); ?></h3>
                 <p>Net Profit</p>
+                <small><?php //echo $expense_summary['count'] ?? 0; ?> Profit Reports</small>
             </div>
         </div>
         <div class="col-md-3">
@@ -128,6 +129,7 @@ $top_customers = $conn->query("
                     echo $customer_result->fetch_assoc()['count'];
                 ?></h3>
                 <p>Total Customers</p>
+                <small><?php //echo $expense_summary['count'] ?? 0; ?> Customers Reports</small>
             </div>
         </div>
     </div>
